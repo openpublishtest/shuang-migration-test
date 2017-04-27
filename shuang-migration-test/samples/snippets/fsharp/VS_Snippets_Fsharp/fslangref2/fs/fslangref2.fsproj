@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a0a4d127-bdd3-44f3-af9f-d11b503a47f2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>FsLangRef2</RootNamespace>
+    <AssemblyName>FsLangRef2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <Name>FsLangRef2</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <Tailcalls>false</Tailcalls>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\Debug\FsLangRef2.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <Tailcalls>true</Tailcalls>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>3</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>bin\Release\FsLangRef2.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="FSharp.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivePatterns.fs" />
+    <Compile Include="Assertions.fs" />
+    <Compile Include="AsynchronousWorkflows.fs" />
+    <Compile Include="Attributes.fs" />
+    <Compile Include="CastingAndConversions.fs" />
+    <Compile Include="CompilerDirectives.fs" />
+    <Compile Include="ConditionalExpressions.fs" />
+    <Compile Include="Constructors.fs" />
+    <Compile Include="Delegates.fs" />
+    <Compile Include="Events.fs" />
+    <Compile Include="ExceptionTypes.fs" />
+    <Compile Include="ExplicitFields.fs" />
+    <Compile Include="FailWith.fs" />
+    <Compile Include="FlexibleTypes.fs" />
+    <Compile Include="ImportDeclarations.fs" />
+    <Compile Include="InvalidArg.fs" />
+    <Compile Include="Loops1.fs" />
+    <Compile Include="Loops2.fs" />
+    <Compile Include="Loops3.fs" />
+    <Compile Include="MatchExpressions.fs" />
+    <Compile Include="Namespaces.fs" />
+    <Compile Include="Namespaces3.fs" />
+    <Compile Include="Namespaces4.fs" />
+    <Compile Include="Namespaces6.fs" />
+    <Compile Include="Namespaces7.fs" />
+    <Compile Include="ObjectExpressions.fs" />
+    <Compile Include="OperatorOverloading.fs" />
+    <Compile Include="Patterns.fs" />
+    <Compile Include="Raise.fs" />
+    <Compile Include="ResourceManagement.fs" />
+    <Compile Include="SourceFileLinePath.fs" />
+    <Compile Include="TryFinally.fs" />
+    <Compile Include="TryWith.fs" />
+    <Compile Include="TypeExtensions.fs" />
+    <Compile Include="UnitsOfMeasure.fs" />
+    <Compile Include="Workflow.fs" />
+    <Compile Include="XMLDoc.fsi" />
+    <Compile Include="XMLDoc.fs" />
+    <Compile Include="Lazy.fs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\FSharp\1.0\Microsoft.FSharp.Targets" Condition="!Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" Condition=" Exists('$(MSBuildBinPath)\Microsoft.Build.Tasks.v4.0.dll')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	     Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
